@@ -1,4 +1,3 @@
-import kotlin.math.min
 
 fun main(){
 
@@ -29,8 +28,7 @@ fun main(){
 
     println("$mina")
     for (i in 0 until mina){
-        println("${fila[i]} ${columna[i]} \n")
+        println("${fila[i]} ${columna[i]}")
     }
-
 
 }
