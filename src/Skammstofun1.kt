@@ -1,18 +1,20 @@
-fun main() {
-    val numberTheWord = readln().toInt()
-    val inputLine = readln()
+fun skammstofun(words: String): String {
+    var abbreviation = ""
 
-    val words = inputLine.split(" ")
-
-    val upperCaseLetters = mutableListOf<Char>()
-
-    for (word in words) {
-        for (char in word) {
-            if (char.isUpperCase()) {
-                upperCaseLetters.add(char)
-                break
-            }
+    for (word in words.split(" ")) {
+        if (word[0].isUpperCase()) {
+            abbreviation += word[0]
         }
     }
-    println(upperCaseLetters.joinToString(""))
+
+    return abbreviation
+}
+
+fun main() {
+    val n = readLine()!!.toInt()
+    val words = readLine()!!
+
+
+    val abbreviation = skammstofun(words)
+    println(abbreviation)
 }
